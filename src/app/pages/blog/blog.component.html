@@ -1,0 +1,87 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class="global-headline">
+    <p>Pošaljite prijavu</p>
+</div>
+<section>
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="frame">
+            <h1>Tim</h1>
+            <div class="form-group team">
+                <label for="team">Naziv tima</label>
+                <input type="text" class="form-control textbox" id="team" formControlName="team" required>
+                <i class="fa-solid fa-gear"></i>
+            </div>
+            <div class="form-group categories">
+                <label for="categories">Izaberite takmičarsku kategoriju</label>
+                <select id="categories" formControlName="categories">
+                    <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+                </select>
+                <i class="fa-solid fa-gear"></i>
+
+            </div>
+        </div>
+
+        <div class="frame">
+            <h1>Član tima</h1>
+            <div class="form-group">
+                <label for="name">Ime i prezime</label>
+                <input type="text" class="form-control textbox" id="name" formControlName="name" required>
+                <i class="fa-solid fa-user-graduate"></i>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefon</label>
+                <input type="text" class="form-control textbox" id="phone" formControlName="phone" required>
+            </div>
+            <div class="form-group ">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control textbox" id="email" formControlName="email" required>
+            </div>
+            
+            <div class="form-group faculties">
+                <label for="faculties">Fakultet</label>
+                <select id="faculties" formControlName="faculties">
+                    <option *ngFor="let faculty of faculties" [value]="faculty">{{faculty}}</option>
+                </select>
+            </div>
+            <div class="form-group years">
+                <label for="years">Godina studiranja</label>
+                <select id="years" formControlName="years">
+                    <option *ngFor="let year of years" [value]="year">{{year}}</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="linkedin">Link do LinkedIn profila</label>
+                <input type="text" class="form-control textbox" id="linkedin" formControlName="linkedin" required>
+            </div>
+            <div class="form-group">
+                <label for="pdfUpload">Ubacite svoj CV</label>
+                <div class="custom-file-input">
+                    <div class="browse-container">
+                        <button type="button" class="browse-button" (click)="fileInput.click()">Otvori...</button>
+                        <input type="text" class="textbox" [value]="selectedFileName" readonly>
+                        <input type="file" #fileInput accept="application/pdf" (change)="onFileSelected($event)" hidden>
+                    </div>
+                    </div>
+                
+                <small *ngIf="fileSizeError" class="text-danger">Max 6MB</small>
+                <i class="fa-solid fa-file"></i>
+            </div>
+            <div class="form-group sizes">
+                <label for="sizes">Izaberite veličinu majice</label>
+                <select id="sizes" formControlName="sizes">
+                    <option *ngFor="let size of sizes" [value]="size">{{size}}</option>
+                </select>
+            </div>
+        </div>
+
+        
+
+        <div class="button-container">
+        
+            <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Pošalji prijavu</button>
+        </div>
+    </form>
+</section>

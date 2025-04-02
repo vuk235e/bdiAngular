@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.global-headline {
+  height: 200px;
+  width: 100%;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 36px;
+  color: #242424;
+  background-image: url('/pozadina.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+}

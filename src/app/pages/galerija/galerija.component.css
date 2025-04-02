@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+
+body {
+    background: #707071;
+}
+
+.hero {
+    background-image: url('/images/texture.jpg');
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+
+    background-blend-mode: multiply;
+    animation-fill-mode: forwards;
+    animation-name: bgTint;
+    animation-duration: 2s;
+    
+}
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+}
+
+
+
+@keyframes bgTint {
+    from {
+        background-color: transparent;
+    }
+
+    to {
+        background-color: #1111119e;
+    }
+}
+
+
+h1{
+    font-size: 48px;
+    font-weight: 800;
+    text-transform: uppercase;
+
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; 
+    }
+    100% {
+        opacity: 1; 
+    }
+}
+
+
+
+.hero h1 {
+    position: relative;
+    z-index: 2;
+}
+
+
+.gallery {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    grid-auto-flow: dense;
+    padding: 50px;
+    
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.gallery .tall {
+    grid-row: span 2;
+}
+
+.scroll-arrow {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.scroll-arrow img {
+    width: 50px;
+    height: auto;
+}
+
+
+.scroll-arrow:hover {
+    transform: translateX(-50%) scale(1.1);
+}

@@ -1,0 +1,21 @@
+<header [class.shrink]="isShrunk">
+    <nav>
+        <img src="/bdiLogoBeli.png" alt="">
+        <div class="hamburger" (click)="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" [class.open]="isMenuOpen">
+            <a routerLink="/" routerLinkActive="active">BDI 25</a>
+            <a routerLink="/blog" routerLinkActive="active">Prijavi se</a>
+            <a routerLink="/blog" routerLinkActive="active">Panel diskusija</a>
+            <a routerLink="/blog" routerLinkActive="active">Partneri</a>
+            <a routerLink="/contact" routerLinkActive="active">Contact</a>
+            <a routerLink="/raspored" routerLinkActive="active">Raspored</a>
+            <a routerLink="/galerija" routerLinkActive="active">Galerija</a>
+            <a routerLink="/faq" routerLinkActive="active">FAQ</a>
+        </div>
+    </nav>
+</header>
+    

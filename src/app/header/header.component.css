@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+header {
+  background-color: #faa41c;
+  padding: 15px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.5s ease-in-out; 
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+}
+
+nav a {
+  font-family: "Poppins", serif;
+    font-size: 18px;
+    font-weight: 300;
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -15px; /* Adjust the distance of the line above the link */
+    height: 2px; /* Adjust the thickness of the line */
+    background-color: #f2f2f2; /* You can change the color of the line */
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+  }
+
+nav a:hover {
+  color: white;
+}
+
+nav img {
+  object-fit: contain;
+  height: 45px;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+.shrink {
+  padding: 8px 0;  
+  background-color: rgba(255, 165, 0, 0.6); 
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links.open {
+    transform: translateX(0);
+}
+
+@media (max-width: 1024px) {
+
+  nav {
+    justify-content: space-between;
+
+    padding: 0 20px;
+    gap: 0;
+  }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgb(255, 136, 0);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        transform: translateX(100%);
+        width: 200px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}

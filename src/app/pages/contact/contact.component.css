@@ -1,0 +1,135 @@
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 15px;
+    margin-left: 8px;
+}
+
+.col-md-6 {
+  width: 48%;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    align-items: center;
+    padding: 10%;
+    flex-wrap: wrap;
+}
+
+.frame {
+    background-color: #f2f2f2;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: gray;
+    border: 3px solid orange;
+    border-radius: 25px;
+    min-width: 400px;
+    min-height: 390px;
+    width: 400px;
+    padding: 20px;
+    position: relative;
+}
+
+h1 {
+    color: orange;
+    position: absolute;
+    top: -32px;
+    font-size: 30px;
+}
+
+.textbox, textarea {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: gray;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: none;
+}
+
+.textbox:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.8);
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.button-container2 {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    align-self:end;
+    margin-top: 5px;
+    background-color: orange;
+    color: #f2f2f2;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.btn:hover {
+    background-color: darkorange;
+}
+
+.btn:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+/*---------------Upoznajte nas -------------*/
+
+i {
+    font-size: 20px;
+    color: orange;
+    margin-right: 10px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+/*--------misc---------------------*/
+
+.gears-yellow {
+    position: absolute;
+    width: 200px;
+    object-fit: contain;
+    left: -100px; 
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: -1;
+    transform: rotate(-45deg); 
+}

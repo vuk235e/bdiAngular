@@ -1,0 +1,17 @@
+<div class="global-headline">
+    <p>Često postavljana pitanja</p>
+</div>
+<section class="faq-section">
+    <div class="faq-accordion">
+        <div class="faq-item" *ngFor="let faq of faqs; let i = index" (click)="toggleFaq(i)">
+            <div class="faq-question">
+                <p>{{ faq.question }}</p>
+                <i class="fa-solid fa-gear"></i>
+            </div>
+
+            <div class="faq-answer" [ngClass]="{'active': selectedFaq === i}">
+                <p>{{ faq.answer }}</p>
+            </div>
+        </div>
+    </div>
+</section>

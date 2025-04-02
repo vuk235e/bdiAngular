@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerija</title>
+</head>
+    <body>
+
+    
+        <div class="hero">
+            <div class="overlay"></div>
+            <h1>Galerija</h1>
+            <button (click)="scrollToGallery()" class="scroll-arrow">
+                <img src="/images/arrow-down-solid.svg" alt="Strelica na dole">
+            </button>
+        </div>
+
+        
+        <section #gallerySection class="gallery">
+            <div class="image-container"><img src="/images/aa-logo-lokum-jpg.jpg"></div>
+            <div class="image-container"><img src="/images/brusilica.jpg"></div>
+            <div class="image-container tall"><img src="/images/IvaNikolic.jpg"></div>
+            <div class="image-container"><img src="/images/greyBG.avif"></div>
+            <div class="image-container"><img src="/images/circle-solid.svg"></div>
+            <div class="image-container tall"><img src="/images/circle-solid.svg"></div>
+            <div class="image-container"><img src="/images/circle-solid.svg"></div>
+            <div class="image-container"><img src="/images/circle-solid.svg"></div>
+            <div class="image-container"><img src="/images/circle-solid.svg"></div>
+            <div class="image-container"><img src="/images/circle-solid.svg"></div>
+        </section>
+        
+        
+
+    </body>
+</html>

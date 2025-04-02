@@ -1,0 +1,136 @@
+.form-group {
+  width: 100%;
+  margin-bottom: 15px;
+  
+  position: relative;
+}
+
+.form-group i {
+    color: orange;
+}
+
+.form-group label {
+    display: block;
+    font-size: 15px;
+    margin-left: 8px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textbox{
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: gray;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 5;
+     position: relative;
+}
+
+.textbox:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.8);
+}
+
+.btn {
+    align-self:end;
+    margin-top: 5px;
+    background-color: orange;
+    color: #f2f2f2;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.btn:hover {
+    background-color: darkorange;
+}
+
+.btn:disabled {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+.frame {
+    background-color: #f2f2f2;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: gray;
+    border: 3px solid orange;
+    border-radius: 25px;
+    min-width: 400px;
+    width: 400px;
+    padding: 20px;
+    position: relative;
+    margin: 50px 0;
+}
+
+h1 {
+    color: orange;
+    position: absolute;
+    top: -37px;
+    font-size: 30px;
+}
+
+.text-danger {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+select {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: gray;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 2;
+     position: relative;
+
+}
+
+.browse-container {
+    display: flex;
+    gap: 10px;
+}
+
+.browse-button {
+    margin: 3px 0;
+    padding: 0  1rem ;
+    padding-bottom: 3px ;
+    background-color: rgba(255, 166, 0, 0);
+
+    color: orange;
+    border: solid 2px orange;
+    font-size: 13px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.browse-button:hover {
+    background-color: darkorange;
+}
+
+i {
+    font-size: 36px;
+    position: absolute;
+    z-index: 1;
+    top: -4px;
+    right: -10px;
+}

@@ -1,0 +1,53 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<section>
+    <div class="frame">
+        <h1>Pošaljite nam mejl</h1>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Ime i prezime</label>
+                    <input type="text" class="form-control textbox" id="name" formControlName="name" required>
+                </div>
+                <div class="form-group ">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control textbox" id="email" formControlName="email" required>
+                </div>
+            </div>
+            <div class="form-group subject">
+                    <label for="subject">Tema</label>
+                    <input type="text" class="form-control textbox" id="subject" formControlName="subject" required>
+            </div>
+                <div class="form-group">
+                    <label for="message">Poruka</label>
+                    <textarea class="form-control" id="message" formControlName="message" rows="5" required></textarea>
+                </div>
+                <div class="button-container">
+
+                    <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">Pošalji</button>
+                </div>
+        </form>
+        <img src="/gearsYellow.png" class="gears-yellow" alt="">
+    </div>
+    <div class="frame">
+        <h1>Upoznajte nas!</h1>
+        <div class="info">
+            <h3>Udruženje studenata tehnike Evrope - Beograd</h3>
+            <div class="contact-info">
+                <i class="fa-solid fa-location-dot"></i><p>Karnegijeva 4, 11000 Beograd</p>
+                <i class="fa-solid fa-phone"></i><p>011 / 337 05 45</p>
+                <i class="fa-solid fa-envelope"></i><p>beograd&#64;BEST.eu.org</p>
+            </div>
+            <div class="button-container2">
+
+                <button class="btn">Upoznajte naš tim</button>
+            </div>
+        </div>
+    </div>
+    <app-toast message="Poruka je poslata!"></app-toast>
+</section>
+
+
