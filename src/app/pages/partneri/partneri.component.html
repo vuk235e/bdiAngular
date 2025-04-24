@@ -1,0 +1,19 @@
+
+    <div class="header">
+        Ovogodišnji partneri
+    </div>
+    
+    <div class="container">
+        <section *ngFor="let category of partnerCategories">
+            <div class="naslov">{{ category.title }}</div>
+            <div class="line"></div>
+                <div class="partners">
+                    <div class="partner" *ngFor="let partner of category.partners">
+                        <a [href]="partner.link" target="_blank">
+                            <img [src]="partner.image" [alt]="partner.name">
+                        </a>
+                    </div>
+                </div>
+        </section>
+    </div>
+

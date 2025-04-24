@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;800&display=swap');
+
+body {
+  text-align: center;
+  font-family: 'Barlow', sans-serif;
+  background-color: #f2f2f3;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.header {
+  background-color: #707071;
+  padding: 50px 0;
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  padding: 20px 0;
+  font-weight: 800;
+  font-size: 50px;
+}
+
+.organizatori {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px 20px;
+  max-width: 1020px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.kartica {
+  position: relative;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  width: 300px;
+  height: auto;
+  max-width: 90%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 80px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease; 
+}
+
+.kartica .slika {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.kartica img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.kaciga {
+  color: #faa41c;
+  position: absolute;
+  top: -40px;
+  left: -50px;
+  font-size: 80px;
+  transform: rotate(-20deg);
+  z-index: 2;
+}
+
+.info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #faa41c;
+  color: white;
+  border-radius: 10px;
+  padding: 20px 10px;
+  font-weight: 800;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: none; 
+  z-index: 1;
+}
+
+.kartica:hover {
+  transform: translateY(-10px); 
+}
+
+.kartica:hover .info {
+  height: auto;
+  padding: 20px 10px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 800;
+  color: white;
+  margin: 0;
+}
+
+.info h2,
+.info p {
+  margin: 5px 0;
+}
+
+.detalji {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.linkovi {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+}
+
+.kartica:hover .detalji {
+  opacity: 1;
+  max-height: 200px;
+}
+
+.telefon {
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
+}
+
+.ikonica {
+  font-size: 20px;
+  margin: 2px;
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .organizatori {
+    gap: 40px;
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 768px) {
+  .organizatori {
+    gap: 30px;
+    max-width: 540px;
+  }
+
+  .kartica {
+    padding-bottom: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .organizatori {
+    gap: 30px;
+    max-width: 90%;
+  }
+
+  .kartica {
+    width: 100%;
+    max-width: 350px;
+    margin: 30px auto;
+    padding-bottom: 40px;
+  }
+
+  .info {
+    width: 100%;
+    padding: 15px 10px;
+  }
+}

@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;800&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -12,12 +10,12 @@ body {
 }
 
 .hero {
-    background-image: url('/images/texture.jpg');
+    background-image: url('/pozadina.jpg');
     
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,63 +79,149 @@ h1{
 }
 
 
-.gallery {
-    display: grid;
-    grid-gap: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 200px;
-    grid-auto-flow: dense;
-    padding: 50px;
-    
-}
-
-
-.image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-.image-container:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-.gallery .tall {
-    grid-row: span 2;
-}
-
 .scroll-arrow {
     position: absolute;
     bottom: 30px;
     left: 50%;
-    transform: translateX(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: none;
     background: none;
     border: none;
     cursor: pointer;
+    animation: bounce 2s infinite;
     transition: transform 0.3s ease-in-out;
+    transform: translateX(-50%);
 }
 
-.scroll-arrow img {
-    width: 50px;
-    height: auto;
+.scroll-arrow i {
+    font-size: 48px;
+    color: #fff;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
+.scroll-arrow:hover i {
+    color: #faa41c;
+  }
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 
 .scroll-arrow:hover {
-    transform: translateX(-50%) scale(1.1);
+    transform: translateX(-50%) scale(1.2);
+    
+}
+
+.scroll-arrow:hover i {
+    transform: scale(1.2);
+    color: #faa41c;
+    
+  }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .image-container:hover {
+    transform: scale(1.03);
+  }
+  
+  .lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column;
+  }
+  
+  .lightbox-content {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  }
+  
+  .close, .prev, .next {
+    position: absolute;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .close {
+    top: 30px;
+    right: 80px;
+    font-size: 50px;
+  }
+
+  .close i {
+    font-size: 48px;
+    color: #fff;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .close:hover i {
+    transform: scale(1.2);
+    color: #faa41c;
+  }
+  
+  
+  .prev {
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .next {
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .prev i,
+.next i {
+  font-size: 40px;
+  color: #fff;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.prev:hover i,
+.next:hover i {
+  transform: scale(1.2);
+  color: #faa41c;
 }

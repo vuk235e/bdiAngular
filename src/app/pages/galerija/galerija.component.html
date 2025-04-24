@@ -1,36 +1,35 @@
-<!DOCTYPE html>
-<html lang="sr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galerija</title>
-</head>
-    <body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    
-        <div class="hero">
-            <div class="overlay"></div>
-            <h1>Galerija</h1>
-            <button (click)="scrollToGallery()" class="scroll-arrow">
-                <img src="/images/arrow-down-solid.svg" alt="Strelica na dole">
-            </button>
-        </div>
 
-        
-        <section #gallerySection class="gallery">
-            <div class="image-container"><img src="/images/aa-logo-lokum-jpg.jpg"></div>
-            <div class="image-container"><img src="/images/brusilica.jpg"></div>
-            <div class="image-container tall"><img src="/images/IvaNikolic.jpg"></div>
-            <div class="image-container"><img src="/images/greyBG.avif"></div>
-            <div class="image-container"><img src="/images/circle-solid.svg"></div>
-            <div class="image-container tall"><img src="/images/circle-solid.svg"></div>
-            <div class="image-container"><img src="/images/circle-solid.svg"></div>
-            <div class="image-container"><img src="/images/circle-solid.svg"></div>
-            <div class="image-container"><img src="/images/circle-solid.svg"></div>
-            <div class="image-container"><img src="/images/circle-solid.svg"></div>
-        </section>
-        
-        
-
-    </body>
-</html>
+<div class="hero">
+    <div class="overlay"></div>
+    <h1>Galerija</h1>
+    <button (click)="scrollToGallery()" class="scroll-arrow">
+        <i class="fa-solid fa-arrow-down"></i>
+    </button>
+  </div>
+  
+  <section #gallerySection class="gallery">
+    <div
+      *ngFor="let image of galleryImages; let i = index"
+      class="image-container"
+      (click)="openLightbox(i)"
+    >
+      <img [src]="image" alt="Galerija slika" />
+    </div>
+  </section>
+  
+  <div class="lightbox" *ngIf="lightboxOpen">
+    <span class="close" (click)="closeLightbox()">
+        <i class="fas fa-xmark"></i>
+      </span>
+      
+    <img [src]="galleryImages[currentImageIndex]" class="lightbox-content" />
+    <a class="prev" (click)="prevImage()">
+        <i class="fas fa-chevron-left"></i>
+      </a>
+      <a class="next" (click)="nextImage()">
+        <i class="fas fa-chevron-right"></i>
+      </a>
+  </div>
+  

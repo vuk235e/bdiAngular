@@ -30,7 +30,7 @@ h1{
 
 
 body {
-    background-image: url('/images/texture2.JPG');
+    background-image: url('/texture2.JPG');
     background-size: cover; 
     background-position: center; 
     color:  #707071; 
@@ -74,9 +74,7 @@ body {
     animation-delay: 2.5s;
 }
 
-.container:nth-child(4){
-    animation-delay: 3.5s;
-}
+
 
 .text-box{
     padding: 20px 30px;
@@ -86,9 +84,19 @@ body {
     font-size: 18px;
 }
 
+h2{
+    font-weight: 800;
+}
+
 .naslov{
     color: #faa41c;
 }
+
+.address{
+    font-size: 14px;
+    padding-bottom: 15px;
+}
+
 
 .left-container{
     left: 0;
@@ -98,19 +106,22 @@ body {
     left: 50%;
 }
 
-.container img{
+i{
+    color: #faa41c;
+}
+
+.container i{
     position: absolute;
-    width: 30px;
-    border-radius: 50%;
+    font-size: 30px;
     right: -15px;
     top: 32px;
     z-index: 10;
 }
 
-.right-container img{
-    
+.right-container i{
     left: -15px;
 }
+
 
 .timeline::after{
     content: '';
@@ -172,7 +183,7 @@ body {
 @media screen and (max-width:600px){
 
     .timeline{
-        margin:50px auto;
+        margin:0px auto;
     }
     .timeline::after{
         left: 31px;
@@ -181,6 +192,7 @@ body {
         width: 100%;
         padding-left: 80px ;
         padding-right: 25px;
+        padding-bottom: 35px;
     }
     .text-box{
         font-size: 13px;
@@ -192,8 +204,9 @@ body {
         left: 0;
     }
 
-    .left-container img, .right-container img{
+    .left-container i, .right-container i{
         left: 16px;
+
     }
 
     .left-container-arrow,.right-container-arrow{
