@@ -3,6 +3,10 @@
 html, body {
     font-family: 'Barlow', sans-serif;
     background-color: #f2f2f3; 
+    background-image: url('/pozadina.jpg');
+    background-size: cover; 
+    background-position: center; 
+
     color: #707071;
     margin: 0;
     padding: 0;
