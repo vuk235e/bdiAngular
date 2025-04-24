@@ -26,7 +26,6 @@ export class GalerijaComponent {
     '/galerija/DSC_0117.jpeg',
     '/galerija/DSC_0145.jpeg',
     '/galerija/DSC_0160.jpeg',
-    
     '/galerija/DSC_0220.jpeg',
     '/galerija/DSC_0222.jpeg',
     '/galerija/DSC_0232.jpeg',
